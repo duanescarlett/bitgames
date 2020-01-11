@@ -17,6 +17,7 @@ services:
       - CHOKIDAR_USEPOLLING=true
     depends_on:
       - flyway
+    container_name: Node
 
   flyway:
     image: boxfuse/flyway:5.2.4
@@ -57,6 +58,7 @@ services:
       - REACT_APP_API_URL=${REACT_APP_API_URL}
     depends_on:
       - node
+    container_name: React
 
   nginx:
     build:
